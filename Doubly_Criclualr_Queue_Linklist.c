@@ -129,5 +129,8 @@ int main()
     fristinsert (60);
     print ();
     fristdelete ();
+    fristdelete ();
+    fristdelete ();
+    fristdelete ();
     print ();
 }
