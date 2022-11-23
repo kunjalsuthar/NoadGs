@@ -22,7 +22,7 @@ void print()
         printf(" %d ", ptr->data);
         ptr = ptr->next;
     }
-        printf(" %d ", ptr->data);
+    printf(" %d ", ptr->data);
     printf("\n");
 }
 
@@ -35,7 +35,7 @@ void insert(int val)
     if (head == NULL)
     {
         head = temp;
-        temp->next = head ;
+        temp->next = head;
         temp->prev = head;
         return;
     }
@@ -57,7 +57,7 @@ void fristinsert(int val)
     if (head == NULL)
     {
         head = temp;
-        temp->next = head ;
+        temp->next = head;
         temp->prev = head;
         return;
     }
@@ -67,7 +67,7 @@ void fristinsert(int val)
     temp->prev = ptr;
     temp->next = head;
     head->prev = temp;
-    head=temp;
+    head = temp;
     return;
 }
 void deleteEnd()
@@ -96,7 +96,7 @@ void deleteEnd()
 
 void fristdelete()
 {
-    printf ("Fristdelete : \n");
+    printf("Fristdelete : \n");
     struct node *ptr = head;
     struct node *temp = head;
     if (ptr->next == head)
@@ -112,7 +112,6 @@ void fristdelete()
         head->next->prev = ptr;
         head = temp->next;
         free(temp);
-        
     }
 }
 
@@ -124,13 +123,13 @@ int main()
     insert(40);
     insert(50);
     print();
-    deleteEnd ();
-    print ();
-    fristinsert (60);
-    print ();
-    fristdelete ();
-    fristdelete ();
-    fristdelete ();
-    fristdelete ();
-    print ();
+    deleteEnd();
+    print();
+    fristinsert(60);
+    print();
+    fristdelete();
+    fristdelete();
+    fristdelete();
+    fristdelete();
+    print();
 }
